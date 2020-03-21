@@ -10,7 +10,7 @@ public class Product {
         this.pricePerUnit = pricePerUnit;
     }
 
-    BigDecimal pricePerUnit() {
+    BigDecimal getPricePerUnit() {
         return pricePerUnit;
     }
 

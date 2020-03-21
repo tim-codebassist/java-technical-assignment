@@ -10,7 +10,7 @@ public class WeighedProduct {
         this.pricePerKilo = pricePerKilo;
     }
 
-    BigDecimal pricePerKilo() {
+    BigDecimal getPricePerKilo() {
         return pricePerKilo;
     }
 
