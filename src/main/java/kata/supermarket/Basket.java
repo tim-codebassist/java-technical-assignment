@@ -6,6 +6,8 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
+import static java.util.Collections.emptyList;
+
 public class Basket {
     private final List<Item> items;
 
@@ -39,15 +41,9 @@ public class Basket {
                     .setScale(2, RoundingMode.HALF_UP);
         }
 
-        /**
-         * TODO: This could be a good place to apply the results of
-         *  the discount calculations.
-         *  It is not likely to be the best place to do those calculations.
-         *  Think about how Basket could interact with something
-         *  which provides that functionality.
-         */
         private BigDecimal discounts() {
-            return BigDecimal.ZERO;
+            //TODO get the discounts from somewhere
+            return new DiscountCalculator(items, emptyList()).getAmount();
         }
 
         private BigDecimal calculate() {
